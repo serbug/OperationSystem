@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "author": "Buga Serghei",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-mega", "id": "mega", "top": 0.6, "left": -0.6, "attrs": {} },
+      {
+        "type": "wokwi-dht22",
+        "id": "dht1",
+        "top": -172.5,
+        "left": 205.8,
+        "attrs": {}
+      },
+      { "type": "wokwi-relay-module", "id": "relay1", "top": 221, "left": 230.4, "attrs": {} }
+    ],
+    "connections": [
+      [ "mega:5V", "dht1:VCC", "red", [ "v0" ] ],
+      [ "mega:GND.2", "dht1:GND", "black", [ "v0" ] ],
+      [ "mega:2", "dht1:SDA", "yellow", [ "v0" ] ],
+      [ "mega:3.3V", "relay1:VCC", "red", [ "v0" ] ],
+      [ "mega:GND.3", "relay1:GND", "black", [ "v0" ] ],
+      [ "mega:8", "relay1:IN", "yellow", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
